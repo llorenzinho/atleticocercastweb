@@ -17,7 +17,7 @@ interface DonationModalProps {
   triggerText?: string;
 }
 
-export default function DonationModal({ children, triggerText = "Donazioni" }: DonationModalProps) {
+export default function DonationModal({ children }: DonationModalProps) {
   const [open, setOpen] = useState(false)
   const [selectedAmount, setSelectedAmount] = useState("10.00")
   const [customAmount, setCustomAmount] = useState("")
