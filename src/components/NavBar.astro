@@ -1,0 +1,45 @@
+---
+// Navbar component
+import Logo from './Logo.astro';
+import DonationModal from './DonationModal';
+---
+
+<header class="sticky top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+    <!-- Diagonal background split -->
+    <div class="absolute inset-0 bg-black" style="clip-path: polygon(0 0, 85% 0, 55% 100%, 0% 100%);"></div>
+    <div class="absolute inset-0 bg-primary" style="clip-path: polygon(85% 0, 100% 0, 100% 100%, 80% 100%);"></div>
+    
+    <!-- Content -->
+    <div class="container mx-auto px-4 py-4 relative z-10">
+        <div class="flex items-center justify-between">
+            <!-- Logo on the left -->
+            <div class="flex items-center">
+                <Logo />
+            </div>
+            
+            <!-- Navigation menu in center -->
+            <div class="flex items-center justify-center flex-1">
+                <nav class="hidden md:flex items-center space-x-8">
+                    <a href="/storia" class="text-white hover:text-primary transition-colors font-medium">Storia</a>
+                    <a href="/leadership" class="text-white hover:text-primary transition-colors font-medium">Dirigenza</a>
+                    <a href="/partners" class="text-white hover:text-primary transition-colors font-medium">Partners</a>
+                    <a href="/contact" class="text-white hover:text-primary transition-colors font-medium">Contatti</a>
+                    <DonationModal client:load>
+                        <button class="bg-primary text-primary-foreground px-4 py-2 rounded-md font-medium hover:opacity-90 transition-opacity">
+                            Donazioni
+                        </button>
+                    </DonationModal>
+                </nav>
+            </div>
+            
+            <!-- Mobile menu button on the right -->
+            <div class="flex items-center">
+                <button class="md:hidden text-white hover:text-primary transition-colors">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+</header>

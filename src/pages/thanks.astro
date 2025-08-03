@@ -1,0 +1,94 @@
+---
+// Thanks page for successful donations
+import Layout from '../layouts/main.astro';
+---
+
+<Layout title="Grazie per la Donazione">
+  <div class="min-h-screen flex items-center justify-center bg-background">
+    <div class="text-center space-y-8 p-8">
+      <!-- Success Icon -->
+      <div class="mx-auto w-24 h-24 bg-primary rounded-full flex items-center justify-center">
+        <svg class="w-12 h-12 text-primary-foreground" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+        </svg>
+      </div>
+      
+      <!-- Thank You Message -->
+      <div class="space-y-4">
+        <h1 class="text-4xl md:text-6xl font-bold text-primary">
+          Grazie!
+        </h1>
+        <p class="text-xl md:text-2xl text-foreground max-w-2xl mx-auto">
+          La tua donazione è stata ricevuta con successo. 
+          Grazie per il tuo supporto ad Atletico CerCast!
+        </p>
+      </div>
+      
+      <!-- Amount Display (if passed via URL) -->
+      <div id="donation-amount" class="text-lg text-muted-foreground">
+        <!-- Will be populated by JavaScript -->
+      </div>
+      
+      <!-- Action Buttons -->
+      <div class="flex flex-col sm:flex-row gap-4 justify-center mt-8">
+        <a 
+          href="/" 
+          class="bg-primary text-primary-foreground px-8 py-3 rounded-md font-medium hover:opacity-90 transition-opacity inline-block"
+        >
+          Torna alla Home
+        </a>
+        <button 
+          id="donate-again"
+          class="bg-muted text-foreground px-8 py-3 rounded-md font-medium hover:bg-accent transition-colors"
+        >
+          Dona Ancora
+        </button>
+      </div>
+    </div>
+  </div>
+</Layout>
+
+<script>
+  import confetti from 'canvas-confetti';
+  
+  // Trigger confetti on page load
+  document.addEventListener('DOMContentLoaded', () => {
+    // Multiple confetti bursts for celebration - all starting together from bottom
+    confetti({
+      particleCount: 100,
+      spread: 70,
+      origin: { y: 1 }, // Start from bottom
+      colors: ['#ffd900', '#000000', '#ffffff']
+    });
+    
+    confetti({
+      particleCount: 80,
+      spread: 50,
+      origin: { x: 0.2, y: 1 }, // Start from bottom left
+      colors: ['#ffd900', '#000000', '#ffffff']
+    });
+    
+    confetti({
+      particleCount: 80,
+      spread: 50,
+      origin: { x: 0.8, y: 1 }, // Start from bottom right
+      colors: ['#ffd900', '#000000', '#ffffff']
+    });
+  });
+  
+  // Display donation amount if passed via URL
+  const urlParams = new URLSearchParams(window.location.search);
+  const amount = urlParams.get('amount');
+  const donationAmountElement = document.getElementById('donation-amount');
+  if (amount && donationAmountElement) {
+    donationAmountElement.textContent = `Importo donato: €${amount}`;
+  }
+  
+  // Handle "Dona Ancora" button - redirect to home page for now
+  const donateAgainButton = document.getElementById('donate-again');
+  if (donateAgainButton) {
+    donateAgainButton.addEventListener('click', () => {
+      window.location.href = '/';
+    });
+  }
+</script> 

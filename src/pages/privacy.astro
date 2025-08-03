@@ -1,0 +1,103 @@
+---
+import Layout from '../layouts/main.astro';
+
+const title = 'Privacy Policy';
+---
+
+<Layout title={title}>
+	<div class="container mx-auto px-4 py-12">
+		<!-- Header Section -->
+		<div class="text-center mb-12">
+			<h1 class="text-4xl md:text-5xl font-bold text-foreground mb-4">
+				Privacy Policy
+			</h1>
+			<p class="text-lg text-muted-foreground max-w-2xl mx-auto">
+				La nostra politica sulla privacy e la protezione dei tuoi dati personali
+			</p>
+		</div>
+
+		<!-- Privacy Content -->
+		<div class="max-w-4xl mx-auto">
+			<div class="bg-card border border-border rounded-lg p-8">
+				<div class="prose prose-invert max-w-none">
+					<h2 class="text-2xl font-bold text-foreground mb-6">1. Informazioni Generali</h2>
+					<p class="text-muted-foreground mb-6">
+						Atletico CerCast ("noi", "nostro", "ci") si impegna a proteggere la tua privacy. 
+						Questa Privacy Policy spiega come raccogliamo, utilizziamo e proteggiamo le tue informazioni 
+						quando visiti il nostro sito web.
+					</p>
+
+					<h2 class="text-2xl font-bold text-foreground mb-6">2. Informazioni che Raccogliamo</h2>
+					<p class="text-muted-foreground mb-4">Raccogliamo le seguenti informazioni:</p>
+					<ul class="list-disc list-inside text-muted-foreground mb-6 space-y-2">
+						<li>Informazioni di contatto (nome, email, telefono) quando ci contatti</li>
+						<li>Dati di navigazione e cookie del sito web</li>
+						<li>Informazioni sui dispositivi e browser utilizzati</li>
+						<li>Dati relativi alle donazioni e transazioni</li>
+					</ul>
+
+					<h2 class="text-2xl font-bold text-foreground mb-6">3. Come Utilizziamo le Informazioni</h2>
+					<p class="text-muted-foreground mb-4">Utilizziamo le tue informazioni per:</p>
+					<ul class="list-disc list-inside text-muted-foreground mb-6 space-y-2">
+						<li>Rispondere alle tue richieste e domande</li>
+						<li>Gestire le donazioni e le transazioni</li>
+						<li>Migliorare il nostro sito web e servizi</li>
+						<li>Inviare comunicazioni relative alla squadra (con il tuo consenso)</li>
+						<li>Rispettare gli obblighi legali</li>
+					</ul>
+
+					<h2 class="text-2xl font-bold text-foreground mb-6">4. Condivisione delle Informazioni</h2>
+					<p class="text-muted-foreground mb-6">
+						Non vendiamo, affittiamo o condividiamo le tue informazioni personali con terze parti, 
+						eccetto nei seguenti casi:
+					</p>
+					<ul class="list-disc list-inside text-muted-foreground mb-6 space-y-2">
+						<li>Con il tuo consenso esplicito</li>
+						<li>Per rispettare obblighi legali o regolamentari</li>
+						<li>Con fornitori di servizi che ci aiutano a gestire il sito (solo con garanzie di protezione)</li>
+					</ul>
+
+					<h2 class="text-2xl font-bold text-foreground mb-6">5. Sicurezza dei Dati</h2>
+					<p class="text-muted-foreground mb-6">
+						Implementiamo misure di sicurezza appropriate per proteggere le tue informazioni personali 
+						contro accesso non autorizzato, alterazione, divulgazione o distruzione.
+					</p>
+
+					<h2 class="text-2xl font-bold text-foreground mb-6">6. I Tuoi Diritti</h2>
+					<p class="text-muted-foreground mb-4">Hai il diritto di:</p>
+					<ul class="list-disc list-inside text-muted-foreground mb-6 space-y-2">
+						<li>Accedere alle tue informazioni personali</li>
+						<li>Correggere informazioni inesatte</li>
+						<li>Richiedere la cancellazione dei tuoi dati</li>
+						<li>Opporti al trattamento dei tuoi dati</li>
+						<li>Richiedere la portabilità dei tuoi dati</li>
+					</ul>
+
+					<h2 class="text-2xl font-bold text-foreground mb-6">7. Cookie</h2>
+					<p class="text-muted-foreground mb-6">
+						Utilizziamo cookie per migliorare la tua esperienza sul nostro sito. 
+						Puoi gestire le tue preferenze sui cookie nelle impostazioni del browser.
+					</p>
+
+					<h2 class="text-2xl font-bold text-foreground mb-6">8. Modifiche alla Privacy Policy</h2>
+					<p class="text-muted-foreground mb-6">
+						Ci riserviamo il diritto di aggiornare questa Privacy Policy. 
+						Le modifiche saranno pubblicate su questa pagina con una data di revisione aggiornata.
+					</p>
+
+					<h2 class="text-2xl font-bold text-foreground mb-6">9. Contattaci</h2>
+					<p class="text-muted-foreground mb-6">
+						Se hai domande su questa Privacy Policy o sul trattamento dei tuoi dati personali, 
+						contattaci all'indirizzo email: atleticocercast@gmail.com
+					</p>
+
+					<div class="bg-muted p-4 rounded-lg mt-8">
+						<p class="text-sm text-muted-foreground">
+							<strong>Ultimo aggiornamento:</strong> {new Date().toLocaleDateString('it-IT')}
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</Layout> 

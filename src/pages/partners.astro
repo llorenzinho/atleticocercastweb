@@ -1,0 +1,140 @@
+---
+import Layout from '../layouts/main.astro';
+import SponsorCard from '../components/SponsorCard';
+
+const title = 'I Nostri Partner';
+---
+
+<Layout title={title}>
+	<div class="container mx-auto px-4 py-12">
+		<!-- Header Section -->
+		<div class="text-center mb-12">
+			<h1 class="text-4xl md:text-5xl font-bold text-foreground mb-4">
+				I Nostri Partner
+			</h1>
+			<p class="text-lg text-muted-foreground max-w-2xl mx-auto">
+				Grazie ai nostri partner che supportano l'Atletico CerCast nel nostro percorso verso il successo
+			</p>
+		</div>
+
+		<!-- Main Sponsors Section -->
+		<div class="mb-16">
+			<h2 class="text-2xl md:text-3xl font-bold text-foreground mb-8 text-center">
+				Partner Principali
+			</h2>
+			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
+				<SponsorCard
+					name="Lorem Ipsum"
+					logo="/src/assets/logo.png"
+					description="Lorem Ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos."
+					link="https://sporttechpro.com"
+					type="main"
+				/>
+
+				<SponsorCard
+					name="Lorem Ipsum"
+					logo="/src/assets/logo.png"
+					description="Lorem Ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos."
+					link="https://fitnessplus.it"
+					type="main"
+				/>
+
+				<SponsorCard
+					name="Lorem Ipsum"
+					logo="/src/assets/logo.png"
+					description="Lorem Ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos."
+					link="https://energydrinkco.com"
+					type="main"
+				/>
+			</div>
+		</div>
+
+		<!-- Secondary Sponsors Section -->
+		<div>
+			<h2 class="text-2xl md:text-3xl font-bold text-foreground mb-8 text-center">
+				Partner di Supporto
+			</h2>
+			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 max-w-7xl mx-auto">
+				<SponsorCard
+					name="Lorem Ipsum"
+					logo="/src/assets/logo.png"
+					description="Lorem Ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos."
+					link="https://localsportsstore.it"
+					type="secondary"
+				/>
+
+				<SponsorCard
+					name="Lorem Ipsum"
+					logo="/src/assets/logo.png"
+					description="Lorem Ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos."
+					link="https://localsportsstore.it"
+					type="secondary"
+				/>
+
+				<SponsorCard
+					name="Lorem Ipsum"
+					logo="/src/assets/logo.png"
+					description="Lorem Ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos."
+					link="https://localsportsstore.it"
+					type="secondary"
+				/>
+
+				<SponsorCard
+					name="Lorem Ipsum"
+					logo="/src/assets/logo.png"
+					description="Lorem Ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos."
+					link="https://localsportsstore.it"
+					type="secondary"
+				/>
+
+				<SponsorCard
+					name="Lorem Ipsum"
+					logo="/src/assets/logo.png"
+					description="Lorem Ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos."
+					link="https://localsportsstore.it"
+					type="secondary"
+				/>
+
+				<SponsorCard
+					name="Lorem Ipsum"
+					logo="/src/assets/logo.png"
+					description="Lorem Ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos."
+					link="https://localsportsstore.it"
+					type="secondary"
+				/>
+
+				<SponsorCard
+					name="Lorem Ipsum"
+					logo="/src/assets/logo.png"
+					description="Lorem Ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos."
+					link="https://localsportsstore.it"
+					type="secondary"
+				/>
+
+				<SponsorCard
+					name="Lorem Ipsum"
+					logo="/src/assets/logo.png"
+					description="Lorem Ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos."
+					link="https://localsportsstore.it"
+					type="secondary"
+				/>
+			</div>
+		</div>
+
+		<!-- Call to Action -->
+		<div class="text-center mt-16">
+			<h3 class="text-xl font-semibold text-foreground mb-4">
+				Diventa un Partner
+			</h3>
+			<p class="text-muted-foreground mb-6 max-w-2xl mx-auto">
+				Sei interessato a supportare l'Atletico CerCast? Scopri le opportunità di partnership e come possiamo collaborare insieme.
+			</p>
+			<a 
+				href="/contact" 
+				class="inline-flex items-center px-6 py-3 bg-primary text-primary-foreground font-medium rounded-lg hover:bg-primary/90 transition-colors duration-200"
+			>
+				Contattaci
+			</a>
+		</div>
+	</div>
+</Layout> 

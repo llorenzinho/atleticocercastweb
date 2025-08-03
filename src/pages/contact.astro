@@ -1,0 +1,106 @@
+---
+import Layout from '../layouts/main.astro';
+import ContactForm from '../components/ContactForm';
+
+const title = 'Contattaci';
+---
+
+<Layout title={title}>
+	<div class="container mx-auto px-4 py-12">
+		<!-- Header Section -->
+		<div class="text-center mb-12">
+			<h1 class="text-4xl md:text-5xl font-bold text-foreground mb-4">
+				Contattaci
+			</h1>
+			<p class="text-lg text-muted-foreground max-w-2xl mx-auto">
+				Hai domande? Vuoi saperne di più su Atletico CerCast? 
+				Non esitare a contattarci!
+			</p>
+		</div>
+
+		<!-- Contact Content -->
+		<div class="max-w-4xl mx-auto">
+			<div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+				<!-- Contact Information -->
+				<div class="space-y-8">
+					<div class="bg-card border border-border rounded-lg p-6">
+						<h2 class="text-2xl font-bold text-foreground mb-6">
+							Informazioni di Contatto
+						</h2>
+						
+						<div class="space-y-4">
+							<div class="flex items-center space-x-3">
+								<div class="w-10 h-10 bg-primary rounded-full flex items-center justify-center">
+									<svg class="w-5 h-5 text-primary-foreground" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+									</svg>
+								</div>
+								<div>
+									<p class="font-medium text-foreground">Email</p>
+									<p class="text-muted-foreground">atleticocercast@gmail.com</p>
+								</div>
+							</div>
+							
+							<div class="flex items-center space-x-3">
+								<div class="w-10 h-10 bg-primary rounded-full flex items-center justify-center">
+									<svg class="w-5 h-5 text-primary-foreground" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+									</svg>
+								</div>
+								<div>
+									<p class="font-medium text-foreground">Sede</p>
+									<p class="text-muted-foreground">Cerratina - Castellana, Pescara</p>
+								</div>
+							</div>
+							
+							<div class="flex items-center space-x-3">
+								<div class="w-10 h-10 bg-primary rounded-full flex items-center justify-center">
+									<svg class="w-5 h-5 text-primary-foreground" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+									</svg>
+								</div>
+								<div>
+									<p class="font-medium text-foreground">Orari</p>
+									<p class="text-muted-foreground">Lun-Dom: 9:00-18:00</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<div class="bg-card border border-border rounded-lg p-6">
+						<h3 class="text-xl font-bold text-foreground mb-4">
+							Perché Contattarci?
+						</h3>
+						<ul class="space-y-2 text-muted-foreground">
+							<li class="flex items-center space-x-2">
+								<span class="w-2 h-2 bg-primary rounded-full"></span>
+								<span>Informazioni sulla squadra</span>
+							</li>
+							<li class="flex items-center space-x-2">
+								<span class="w-2 h-2 bg-primary rounded-full"></span>
+								<span>Partnership e sponsorizzazioni</span>
+							</li>
+							<li class="flex items-center space-x-2">
+								<span class="w-2 h-2 bg-primary rounded-full"></span>
+								<span>Gioca con noi</span>
+							</li>
+							<li class="flex items-center space-x-2">
+								<span class="w-2 h-2 bg-primary rounded-full"></span>
+								<span>Supporto e donazioni</span>
+							</li>
+						</ul>
+					</div>
+				</div>
+				
+				<!-- Contact Form -->
+				<div class="bg-card border border-border rounded-lg p-6">
+					<h2 class="text-2xl font-bold text-foreground mb-6">
+						Invia un Messaggio
+					</h2>
+					<ContactForm client:load />
+				</div>
+			</div>
+		</div>
+	</div>
+</Layout> 

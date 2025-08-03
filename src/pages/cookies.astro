@@ -1,0 +1,131 @@
+---
+import Layout from '../layouts/main.astro';
+
+const title = 'Policy sui Cookie';
+---
+
+<Layout title={title}>
+	<div class="container mx-auto px-4 py-12">
+		<!-- Header Section -->
+		<div class="text-center mb-12">
+			<h1 class="text-4xl md:text-5xl font-bold text-foreground mb-4">
+				Policy sui Cookie
+			</h1>
+			<p class="text-lg text-muted-foreground max-w-2xl mx-auto">
+				Informazioni sui cookie utilizzati dal nostro sito web e come gestirli
+			</p>
+		</div>
+
+		<!-- Cookies Content -->
+		<div class="max-w-4xl mx-auto">
+			<div class="bg-card border border-border rounded-lg p-8">
+				<div class="prose prose-invert max-w-none">
+					<h2 class="text-2xl font-bold text-foreground mb-6">1. Cosa sono i Cookie</h2>
+					<p class="text-muted-foreground mb-6">
+						I cookie sono piccoli file di testo che vengono memorizzati sul tuo dispositivo 
+						quando visiti un sito web. Ci aiutano a migliorare la tua esperienza di navigazione 
+						e a fornire funzionalità personalizzate.
+					</p>
+
+					<h2 class="text-2xl font-bold text-foreground mb-6">2. Tipi di Cookie che Utilizziamo</h2>
+					
+					<h3 class="text-xl font-bold text-foreground mb-4">Cookie Tecnici (Necessari)</h3>
+					<p class="text-muted-foreground mb-4">Questi cookie sono essenziali per il funzionamento del sito:</p>
+					<ul class="list-disc list-inside text-muted-foreground mb-6 space-y-2">
+						<li>Cookie di sessione per mantenere la tua sessione attiva</li>
+						<li>Cookie di sicurezza per proteggere il sito</li>
+						<li>Cookie di preferenze per ricordare le tue impostazioni</li>
+					</ul>
+
+					<h3 class="text-xl font-bold text-foreground mb-4">Cookie Analitici</h3>
+					<p class="text-muted-foreground mb-4">Questi cookie ci aiutano a comprendere come utilizzi il sito:</p>
+					<ul class="list-disc list-inside text-muted-foreground mb-6 space-y-2">
+						<li>Statistiche di navigazione e pagine più visitate</li>
+						<li>Tempo di permanenza sul sito</li>
+						<li>Dispositivi e browser utilizzati</li>
+						<li>Prestazioni del sito web</li>
+					</ul>
+
+					<h3 class="text-xl font-bold text-foreground mb-4">Cookie di Terze Parti</h3>
+					<p class="text-muted-foreground mb-4">Alcuni servizi esterni possono utilizzare cookie:</p>
+					<ul class="list-disc list-inside text-muted-foreground mb-6 space-y-2">
+						<li>PayPal per le transazioni di donazione</li>
+						<li>Google Analytics per le statistiche (se utilizzato)</li>
+						<li>Social media per la condivisione di contenuti</li>
+					</ul>
+
+					<h2 class="text-2xl font-bold text-foreground mb-6">3. Durata dei Cookie</h2>
+					<p class="text-muted-foreground mb-4">I cookie hanno diverse durate:</p>
+					<ul class="list-disc list-inside text-muted-foreground mb-6 space-y-2">
+						<li><strong>Cookie di sessione:</strong> Vengono eliminati quando chiudi il browser</li>
+						<li><strong>Cookie persistenti:</strong> Rimangono sul dispositivo per un periodo specifico</li>
+						<li><strong>Cookie di terze parti:</strong> Seguono le politiche dei rispettivi servizi</li>
+					</ul>
+
+					<h2 class="text-2xl font-bold text-foreground mb-6">4. Gestione dei Cookie</h2>
+					<p class="text-muted-foreground mb-4">Puoi controllare i cookie in diversi modi:</p>
+					<ul class="list-disc list-inside text-muted-foreground mb-6 space-y-2">
+						<li><strong>Impostazioni del browser:</strong> Configura le preferenze sui cookie</li>
+						<li><strong>Modalità di navigazione in incognito:</strong> I cookie vengono eliminati alla chiusura</li>
+						<li><strong>Software di terze parti:</strong> Utilizza estensioni per bloccare i cookie</li>
+						<li><strong>Impostazioni del dispositivo:</strong> Gestisci i cookie a livello di sistema</li>
+					</ul>
+
+					<h2 class="text-2xl font-bold text-foreground mb-6">5. Impatto della Disabilitazione</h2>
+					<p class="text-muted-foreground mb-6">
+						Disabilitare i cookie può influenzare il funzionamento del sito web. 
+						Alcune funzionalità potrebbero non essere disponibili o potrebbero non funzionare correttamente.
+					</p>
+
+					<h2 class="text-2xl font-bold text-foreground mb-6">6. Cookie Specifici del Nostro Sito</h2>
+					<div class="bg-muted p-4 rounded-lg mb-6">
+						<table class="w-full text-sm">
+							<thead>
+								<tr class="border-b border-border">
+									<th class="text-left py-2 font-bold">Nome Cookie</th>
+									<th class="text-left py-2 font-bold">Scopo</th>
+									<th class="text-left py-2 font-bold">Durata</th>
+								</tr>
+							</thead>
+							<tbody class="text-muted-foreground">
+								<tr class="border-b border-border">
+									<td class="py-2">session_id</td>
+									<td class="py-2">Mantenere la sessione utente</td>
+									<td class="py-2">Sessione</td>
+								</tr>
+								<tr class="border-b border-border">
+									<td class="py-2">preferences</td>
+									<td class="py-2">Salvare le preferenze utente</td>
+									<td class="py-2">1 anno</td>
+								</tr>
+								<tr>
+									<td class="py-2">analytics</td>
+									<td class="py-2">Statistiche di navigazione</td>
+									<td class="py-2">2 anni</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+
+					<h2 class="text-2xl font-bold text-foreground mb-6">7. Aggiornamenti alla Policy</h2>
+					<p class="text-muted-foreground mb-6">
+						Questa Policy sui Cookie può essere aggiornata periodicamente. 
+						Ti informeremo di eventuali modifiche significative pubblicandole su questa pagina.
+					</p>
+
+					<h2 class="text-2xl font-bold text-foreground mb-6">8. Contattaci</h2>
+					<p class="text-muted-foreground mb-6">
+						Se hai domande sulla nostra Policy sui Cookie, contattaci all'indirizzo email: 
+						atleticocercast@gmail.com
+					</p>
+
+					<div class="bg-muted p-4 rounded-lg mt-8">
+						<p class="text-sm text-muted-foreground">
+							<strong>Ultimo aggiornamento:</strong> {new Date().toLocaleDateString('it-IT')}
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</Layout> 

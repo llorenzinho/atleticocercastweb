@@ -1,0 +1,87 @@
+---
+import Layout from '../layouts/main.astro';
+import PersonCard from '../components/PersonCard';
+
+const title = 'Dirigenza';
+---
+
+<Layout title={title}>
+	<div class="container mx-auto px-4 py-12">
+		<!-- Header Section -->
+		<div class="text-center mb-12">
+			<h1 class="text-4xl md:text-5xl font-bold text-foreground mb-4">
+				La Nostra Dirigenza
+			</h1>
+			<p class="text-lg text-muted-foreground max-w-2xl mx-auto">
+				Conosci il team che guida l'Atletico CerCast verso il successo
+			</p>
+		</div>
+
+		<!-- Responsive Grid -->
+		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
+			<PersonCard
+				name="Leonardo"
+				surname="Del Prete"
+				image="/src/assets/logo.png"
+				role="Presidente"
+				description="Descrizione che scegliete voi"
+			/>
+
+			<PersonCard
+				name="Eddy"
+				surname="Di Renzo"
+				image="/src/assets/logo.png"
+				role="Vice Presidente"
+				description="Descrizione che scegliete voi"
+			/>
+
+			<PersonCard
+				name="Antonio"
+				surname="Vairo"
+				image="/src/assets/logo.png"
+				role="Tesoriere"
+				description="Descrizione che scegliete voi"
+			/>
+
+			<PersonCard
+				name="Paolo"
+				surname="Padovano"
+				image="/src/assets/logo.png"
+				role="Dirigente"
+				description="Descrizione che scegliete voi"
+			/>
+
+			<PersonCard
+				name="Lorenzo"
+				surname="D'Agostino"
+				image="/src/assets/logo.png"
+				role="Dirigente"
+				description="Descrizione che scegliete voi"
+			/>
+
+			<PersonCard
+				name="Andrea"
+				surname="Giuliani"
+				image="/src/assets/logo.png"
+				role="Dirigente"
+				description="Descrizione che scegliete voi"
+			/>
+
+			<PersonCard
+				name="Daniele"
+				surname="Crisante"
+				image="/src/assets/logo.png"
+				role="Dirigente"
+				description="Descrizione che scegliete voi"
+			/>
+
+			<PersonCard
+				name="Christian"
+				surname="D'Attanasio"
+				image="/src/assets/logo.png"
+				role="Dirigente"
+				description="Descrizione che scegliete voi"
+			/>
+		</div>
+	</div>
+</Layout>

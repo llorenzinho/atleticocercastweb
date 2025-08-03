@@ -1,0 +1,107 @@
+---
+import Layout from '../layouts/main.astro';
+
+const title = 'Termini di Servizio';
+---
+
+<Layout title={title}>
+	<div class="container mx-auto px-4 py-12">
+		<!-- Header Section -->
+		<div class="text-center mb-12">
+			<h1 class="text-4xl md:text-5xl font-bold text-foreground mb-4">
+				Termini di Servizio
+			</h1>
+			<p class="text-lg text-muted-foreground max-w-2xl mx-auto">
+				I termini e le condizioni per l'utilizzo del nostro sito web e servizi
+			</p>
+		</div>
+
+		<!-- Terms Content -->
+		<div class="max-w-4xl mx-auto">
+			<div class="bg-card border border-border rounded-lg p-8">
+				<div class="prose prose-invert max-w-none">
+					<h2 class="text-2xl font-bold text-foreground mb-6">1. Accettazione dei Termini</h2>
+					<p class="text-muted-foreground mb-6">
+						Utilizzando il sito web di Atletico CerCast, accetti di essere vincolato da questi Termini di Servizio. 
+						Se non accetti questi termini, ti preghiamo di non utilizzare il nostro sito.
+					</p>
+
+					<h2 class="text-2xl font-bold text-foreground mb-6">2. Descrizione del Servizio</h2>
+					<p class="text-muted-foreground mb-6">
+						Atletico CerCast fornisce informazioni sulla nostra squadra di calcetto, 
+						servizi di contatto, gestione delle donazioni e contenuti relativi alle attività sportive.
+					</p>
+
+					<h2 class="text-2xl font-bold text-foreground mb-6">3. Utilizzo Accettabile</h2>
+					<p class="text-muted-foreground mb-4">Ti impegni a utilizzare il sito web solo per scopi legittimi e in conformità con questi termini. In particolare:</p>
+					<ul class="list-disc list-inside text-muted-foreground mb-6 space-y-2">
+						<li>Non utilizzare il sito per attività illegali o fraudolente</li>
+						<li>Non tentare di accedere a sistemi o reti non autorizzati</li>
+						<li>Non trasmettere virus, malware o altro codice dannoso</li>
+						<li>Non violare i diritti di proprietà intellettuale</li>
+						<li>Non utilizzare il sito per spam o contenuti offensivi</li>
+					</ul>
+
+					<h2 class="text-2xl font-bold text-foreground mb-6">4. Proprietà Intellettuale</h2>
+					<p class="text-muted-foreground mb-6">
+						Tutti i contenuti del sito web, inclusi testi, immagini, loghi, video e design, 
+						sono di proprietà di Atletico CerCast o dei nostri licenziatari e sono protetti 
+						dalle leggi sulla proprietà intellettuale.
+					</p>
+
+					<h2 class="text-2xl font-bold text-foreground mb-6">5. Donazioni e Transazioni</h2>
+					<p class="text-muted-foreground mb-4">Per quanto riguarda le donazioni:</p>
+					<ul class="list-disc list-inside text-muted-foreground mb-6 space-y-2">
+						<li>Le donazioni sono gestite tramite PayPal e soggette ai loro termini</li>
+						<li>Non garantiamo l'utilizzo specifico delle donazioni</li>
+						<li>Le donazioni sono finali e non rimborsabili</li>
+						<li>Ci riserviamo il diritto di rifiutare donazioni inappropriate</li>
+					</ul>
+
+					<h2 class="text-2xl font-bold text-foreground mb-6">6. Limitazione di Responsabilità</h2>
+					<p class="text-muted-foreground mb-6">
+						Atletico CerCast non sarà responsabile per danni diretti, indiretti, incidentali, 
+						speciali o consequenziali derivanti dall'utilizzo del sito web o dall'impossibilità di utilizzarlo.
+					</p>
+
+					<h2 class="text-2xl font-bold text-foreground mb-6">7. Disponibilità del Servizio</h2>
+					<p class="text-muted-foreground mb-6">
+						Ci sforziamo di mantenere il sito web sempre disponibile, ma non garantiamo 
+						che il servizio sarà ininterrotto o privo di errori. Ci riserviamo il diritto 
+						di sospendere o interrompere il servizio in qualsiasi momento.
+					</p>
+
+					<h2 class="text-2xl font-bold text-foreground mb-6">8. Link Esterni</h2>
+					<p class="text-muted-foreground mb-6">
+						Il nostro sito web può contenere link a siti web di terze parti. 
+						Non siamo responsabili per il contenuto o le pratiche di privacy di questi siti esterni.
+					</p>
+
+					<h2 class="text-2xl font-bold text-foreground mb-6">9. Modifiche ai Termini</h2>
+					<p class="text-muted-foreground mb-6">
+						Ci riserviamo il diritto di modificare questi Termini di Servizio in qualsiasi momento. 
+						Le modifiche saranno effettive immediatamente dopo la pubblicazione sul sito web.
+					</p>
+
+					<h2 class="text-2xl font-bold text-foreground mb-6">10. Legge Applicabile</h2>
+					<p class="text-muted-foreground mb-6">
+						Questi Termini di Servizio sono regolati dalle leggi italiane. 
+						Qualsiasi controversia sarà risolta nei tribunali competenti di Pescara, Italia.
+					</p>
+
+					<h2 class="text-2xl font-bold text-foreground mb-6">11. Contattaci</h2>
+					<p class="text-muted-foreground mb-6">
+						Se hai domande su questi Termini di Servizio, contattaci all'indirizzo email: 
+						atleticocercast@gmail.com
+					</p>
+
+					<div class="bg-muted p-4 rounded-lg mt-8">
+						<p class="text-sm text-muted-foreground">
+							<strong>Ultimo aggiornamento:</strong> {new Date().toLocaleDateString('it-IT')}
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</Layout> 

@@ -1,10 +1,10 @@
 ---
 // Click button, get confetti!
-// Styled by Tailwind :)
+// Styled by Tailwind with BVB theme :)
 ---
 
 <button
-	class="appearance-none py-2 px-4 bg-purple-500 text-white font-semibold rounded-lg shadow-md hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-400 focus:ring-opacity-75"
+	class="appearance-none py-2 px-4 bg-primary text-primary-foreground font-semibold rounded-lg shadow-md hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-opacity-75 transition-all"
 >
 	<slot />
 </button>
@@ -14,6 +14,11 @@
 	const button = document.body.querySelector('button');
 
 	if (button) {
-		button.addEventListener('click', () => confetti());
+		button.addEventListener('click', () => confetti({
+			colors: ['#ffd900', '#000000'],
+			particleCount: 100,
+			spread: 70,
+			origin: { y: 0.6 }
+		}));
 	}
 </script>
