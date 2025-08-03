@@ -28,7 +28,7 @@ export default function HeroCarousel() {
   const videoRefs = React.useRef<(HTMLVideoElement | null)[]>([])
 
   const plugin = React.useRef(
-    Autoplay({ delay: 30000, stopOnInteraction: true })
+    Autoplay({ delay: 50000, stopOnInteraction: true })
   )
 
   const slides: Slide[] = [
@@ -51,7 +51,7 @@ export default function HeroCarousel() {
       backgroundAlpha: 0.5 // 50% black overlay
     },
     {
-      title: "DIVENTA PARTNER",
+      title: "PARTNERS",
       description: "Unisciti alla nostra squadra e diventa parte della nostra famiglia",
       buttonText: "Diventa partner",
       buttonAction: () => window.location.href = "/partners",
@@ -109,7 +109,6 @@ export default function HeroCarousel() {
                       src={slide.backgroundMedia} 
                       autoPlay 
                       muted 
-                      loop 
                       playsInline
                       className="w-full h-full object-cover" 
                     />
@@ -140,26 +139,63 @@ export default function HeroCarousel() {
                 )}
                 
                 {/* Content */}
-                <div className="absolute inset-0 flex items-center">
-                  <div className="ml-16 md:ml-24 lg:ml-32 space-y-6">
-                    {/* Title in yellow square */}
-                    <div className="bg-primary px-6 py-3 inline-block">
-                      <h2 className="text-2xl font-bold italic uppercase text-black">
-                        {slide.title}
-                      </h2>
+                <div className="absolute inset-0 flex items-center md:items-center items-end">
+                  <div className="ml-16 md:ml-24 lg:ml-32 space-y-6 md:space-y-6 space-y-4 p-6 md:p-0">
+                    {/* Title and CTA for mobile */}
+                    <div className="md:hidden flex items-center space-x-4">
+                      <div className="bg-primary px-4 py-2 inline-block">
+                        <h2 className="text-lg font-bold italic uppercase text-black">
+                          {slide.title}
+                        </h2>
+                      </div>
+                      
+                      {/* Mobile CTA next to title */}
+                      <div className="inline-block">
+                        {slide.buttonAction ? (
+                          <button 
+                            className="relative px-6 py-2 text-sm font-bold text-black hover:opacity-90 transition-opacity overflow-hidden"
+                            onClick={slide.buttonAction}
+                          >
+                            {/* White parallelepiped with angles */}
+                            <div className="absolute inset-0 bg-white" style={{clipPath: 'polygon(15% 0, 100% 0, 85% 100%, 0% 100%)'}}></div>
+                            <span className="relative z-10 font-bold italic">
+                              {slide.buttonText}
+                            </span>
+                          </button>
+                        ) : (
+                          <DonationModal>
+                            <button className="relative px-6 py-2 text-sm font-bold text-black hover:opacity-90 transition-opacity overflow-hidden">
+                              {/* White parallelepiped with angles */}
+                              <div className="absolute inset-0 bg-white" style={{clipPath: 'polygon(15% 0, 100% 0, 85% 100%, 0% 100%)'}}></div>
+                              <span className="relative z-10 font-bold italic">
+                                {slide.buttonText}
+                              </span>
+                            </button>
+                          </DonationModal>
+                        )}
+                      </div>
+                    </div>
+                    
+                    {/* Desktop title only */}
+                    <div className="hidden md:block">
+                      <div className="bg-primary px-6 py-3 inline-block">
+                        <h2 className="text-2xl font-bold italic uppercase text-black">
+                          {slide.title}
+                        </h2>
+                      </div>
                     </div>
                     
                     {/* Description in black square */}
-                    <div className="bg-black px-8 py-6 max-w-2xl">
-                      <p className="text-3xl font-bold text-white leading-relaxed">
+                    <div className="bg-black px-8 py-6 max-w-2xl md:px-8 md:py-6 md:max-w-2xl px-6 py-4 max-w-none">
+                      <p className="text-3xl md:text-3xl text-xl font-bold text-white leading-relaxed">
                         {slide.description}
                       </p>
                     </div>
                   </div>
                 </div>
                 
-                {/* CTA Button in lower center */}
-                <div className="absolute bottom-20 left-1/4 transform -translate-x-1/2">
+                {/* CTA Button - Desktop */}
+                <div className="absolute bottom-20 left-1/4 transform -translate-x-1/2 hidden md:block">
                   {slide.buttonAction ? (
                     <button 
                       className="relative px-12 py-4 text-lg font-bold text-black hover:opacity-90 transition-opacity overflow-hidden"
@@ -183,6 +219,8 @@ export default function HeroCarousel() {
                     </DonationModal>
                   )}
                 </div>
+                
+
               </div>
             </CarouselItem>
           ))}

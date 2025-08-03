@@ -2,6 +2,7 @@
 // Navbar component
 import Logo from './Logo.astro';
 import DonationModal from './DonationModal';
+import MobileNav from './MobileNav';
 ---
 
 <header class="sticky top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
@@ -34,11 +35,7 @@ import DonationModal from './DonationModal';
             
             <!-- Mobile menu button on the right -->
             <div class="flex items-center">
-                <button class="md:hidden text-white hover:text-primary transition-colors">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                    </svg>
-                </button>
+                <MobileNav client:load />
             </div>
         </div>
     </div>
