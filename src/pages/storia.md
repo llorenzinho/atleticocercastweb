@@ -148,7 +148,7 @@ layout: ../layouts/main.astro
   </div>
 
   <!-- CLOSING QUOTE -->
-  <div class="border-t border-primary/30 pt-8">
+  <div class="border-t border-primary/30 pt-8 m-8">
     <blockquote class="text-2xl italic text-center text-white">
       <span class="text-white font-bold">"Il calcio è più di un gioco, è un modo di vivere"</span>
       <br>
