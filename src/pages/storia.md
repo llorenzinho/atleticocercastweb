@@ -18,7 +18,7 @@ layout: ../layouts/main.astro
   <!-- HERO IMAGE 1 -->
   <div class="relative">
     <img 
-      src="/src/assets/dirigenza.jpg" 
+      src="/images/dirigenza.jpg" 
       alt="La dirigenza di Atletico CerCast" 
       class="w-full h-96 object-cover rounded-lg shadow-2xl"
     />
@@ -44,7 +44,7 @@ layout: ../layouts/main.astro
   <!-- HERO IMAGE 2 -->
   <div class="relative">
     <img 
-      src="/src/assets/borussia.jpg" 
+      src="/images/borussia.jpg" 
       alt="Logo Atletico CerCast" 
       class="w-full rounded-lg shadow-xl"
     />
@@ -91,7 +91,7 @@ layout: ../layouts/main.astro
   <!-- HERO IMAGE 3 -->
   <div class="relative">
     <img 
-      src="/src/assets/castellana_alto.jpg" 
+      src="/images/castellana_alto.jpg" 
       alt="La squadra Atletico CerCast" 
       class="w-full h-80 object-cover rounded-lg shadow-2xl"
     />
@@ -141,7 +141,7 @@ layout: ../layouts/main.astro
   <!-- FINAL HERO IMAGE -->
   <div class="relative">
     <img 
-      src="/src/assets/logo.png" 
+      src="/images/logo.png" 
       alt="Atletico CerCast - Uniti nel Calcio" 
       class="w-full h-48 object-contain rounded-lg shadow-xl bg-gradient-to-r from-primary/30 to-primary/10 p-6"
     />

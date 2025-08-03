@@ -37,7 +37,7 @@ export default function HeroCarousel() {
       description: "Una squadra di calcetto nata per unire i due paesi",
       buttonText: "Scopri di più",
       buttonAction: () => window.location.href = "/storia",
-      backgroundMedia: "/src/assets/cercast.mp4",
+      backgroundMedia: "/videos/cercast.mp4",
       mediaType: "video",
       backgroundAlpha: 0.3 // 30% black overlay
     },
@@ -46,7 +46,7 @@ export default function HeroCarousel() {
       description: "Aiutaci a crescere!",
       buttonText: "Dona con PayPal",
       buttonAction: null, // Will be handled by DonationModal
-      backgroundMedia: "/src/assets/dirigenza.jpg",
+      backgroundMedia: "/images/dirigenza.jpg",
       mediaType: "image",
       backgroundAlpha: 0.5 // 50% black overlay
     },
@@ -55,7 +55,7 @@ export default function HeroCarousel() {
       description: "Unisciti alla nostra squadra e diventa parte della nostra famiglia",
       buttonText: "Diventa partner",
       buttonAction: () => window.location.href = "/partners",
-      backgroundMedia: "/src/assets/logo.png",
+      backgroundMedia: "/images/logo.png",
       mediaType: "image",
       backgroundAlpha: 0.5 // 50% black overlay
     },
@@ -64,7 +64,7 @@ export default function HeroCarousel() {
       description: "Hai domande? Vuoi saperne di più? Non esitare a contattarci!",
       buttonText: "Contattaci",
       buttonAction: () => window.location.href = "/contact",
-      backgroundMedia: "/src/assets/logo.png",
+      backgroundMedia: "/images/logo.png",
       mediaType: "image",
       backgroundAlpha: 0.5 // 50% black overlay
     }
@@ -132,7 +132,7 @@ export default function HeroCarousel() {
                 {!slide.backgroundMedia && (
                   <div className="absolute right-0 top-0 w-full h-full opacity-30" style={{transform: 'translateX(10%)'}}>
                     <img 
-                      src="/src/assets/logo.png" 
+                      src="/images/logo.png" 
                       alt="Atletico CerCast Logo" 
                       className="w-full h-full object-contain object-right" 
                     />
