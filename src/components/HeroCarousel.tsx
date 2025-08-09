@@ -34,7 +34,7 @@ export default function HeroCarousel() {
   const slides: Slide[] = [
     {
       title: "CHI SIAMO",
-      description: "Una squadra di calcetto nata per unire i due paesi",
+      description: "Una squadra di calcetto nata per unire i paesi",
       buttonText: "Scopri di più",
       buttonAction: () => window.location.href = "/storia",
       backgroundMedia: "/videos/cercast.mp4",

@@ -56,7 +56,7 @@ layout: ../layouts/main.astro
     <div class="bg-black/20 p-8 rounded-lg">
       <p class="text-xl font-semibold text-white mb-6">
         La nostra missione è semplice ma ambiziosa: 
-        <span class="text-3xl font-bold block mt-2">unire i due paesi attraverso lo sport. Con l'idea di fare qualcosa in piu per il paese.</span>
+        <span class="text-3xl font-bold block mt-2">unire i nostri paesi attraverso lo sport. Con l'idea di fare qualcosa in piu per il paese.</span>
       </p>
       <div class="grid md:grid-cols-2 gap-6 mt-8">
         <div class="text-left">

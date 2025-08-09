@@ -13,11 +13,12 @@ import { Input } from "@/components/ui/input"
 import { initializePayPalDonation } from "@/lib/donations"
 
 interface DonationModalProps {
-  children: React.ReactNode;
-  triggerText?: string;
+  readonly children?: React.ReactNode;
+  readonly triggerText?: string;
 }
 
-export default function DonationModal({ children }: DonationModalProps) {
+export default function DonationModal(props: DonationModalProps) {
+  const { children, triggerText = "Donazioni" } = props
   const [open, setOpen] = useState(false)
   const [selectedAmount, setSelectedAmount] = useState("10.00")
   const [customAmount, setCustomAmount] = useState("")
@@ -55,7 +56,11 @@ export default function DonationModal({ children }: DonationModalProps) {
   return (
     <Dialog open={open} onOpenChange={setOpen}>
       <DialogTrigger asChild>
-        {children}
+        {children || (
+          <button className="bg-primary text-primary-foreground px-4 py-2 rounded-md font-medium hover:opacity-90 transition-opacity">
+            {triggerText}
+          </button>
+        )}
       </DialogTrigger>
       <DialogContent className="sm:max-w-md">
         <DialogHeader>
