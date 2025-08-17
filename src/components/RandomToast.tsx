@@ -24,7 +24,7 @@ const toastMessages: ToastMessage[] = [
 		),
 		action: {
 			label: "Contattaci",
-			onClick: () => window.open("https://wa.me/393513491091", "_blank")
+			onClick: () => window.open("https://wa.me/393465949627", "_blank")
 		}
 	},
 	{
@@ -39,7 +39,7 @@ const toastMessages: ToastMessage[] = [
 		),
 		action: {
 			label: "Contattaci",
-			onClick: () => window.open("https://wa.me/393513491091?text=Ciao! Vorrei informazioni sulla squadra", "_blank")
+			onClick: () => window.open("https://wa.me/393465949627?text=Ciao! Vorrei informazioni sulla squadra", "_blank")
 		}
 	},
 	/*
@@ -70,12 +70,17 @@ export default function RandomToast() {
 			
 			const currentMessage = toastMessages[currentIndexRef.current];
 			
+			// Check if device is mobile/tablet (screen width <= 768px)
+			const isMobileOrTablet = window.innerWidth <= 768;
+			
 			try {
 				toast(currentMessage.title, {
 					description: currentMessage.description,
 					icon: currentMessage.icon,
 					action: currentMessage.action,
 					duration: 8000,
+					position: isMobileOrTablet ? 'bottom-center' : 'bottom-right',
+					closeButton: isMobileOrTablet,
 				});
 			} catch (error) {
 				console.error('Error showing toast:', error);
@@ -86,7 +91,7 @@ export default function RandomToast() {
 		}
 
 		function scheduleNextToast() {
-			const delay = Math.random() * 20000 + 10000; // 10-30 seconds
+			const delay = Math.random() * 20000 + 15000; // 10-30 seconds
 			setTimeout(() => {
 				showNextToast();
 				// Schedule next toast

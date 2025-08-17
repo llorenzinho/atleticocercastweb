@@ -37,8 +37,8 @@ export default function HeroCarousel() {
       description: "Una squadra di calcetto nata per unire i paesi",
       buttonText: "Scopri di più",
       buttonAction: () => window.location.href = "/storia",
-      backgroundMedia: "/videos/cercast.mp4",
-      mediaType: "video",
+      backgroundMedia: "/images/first_game.jpg",
+      mediaType: "image",
       backgroundAlpha: 0.3 // 30% black overlay
     },
     {
@@ -46,17 +46,17 @@ export default function HeroCarousel() {
       description: "Aiutaci a crescere!",
       buttonText: "Dona con PayPal",
       buttonAction: null, // Will be handled by DonationModal
-      backgroundMedia: "/images/dirigenza.jpg",
+      backgroundMedia: "/images/tavolata.jpg",
       mediaType: "image",
-      backgroundAlpha: 0.5 // 50% black overlay
+      backgroundAlpha: 0.2 // 50% black overlay
     },
     {
       title: "PARTNERS",
       description: "Unisciti alla nostra squadra e diventa parte della nostra famiglia",
       buttonText: "Diventa partner",
       buttonAction: () => window.location.href = "/partners",
-      backgroundMedia: "/images/logo.png",
-      mediaType: "image",
+      backgroundMedia: "/videos/cercast.mp4",
+      mediaType: "video",
       backgroundAlpha: 0.5 // 50% black overlay
     },
     {
@@ -64,7 +64,7 @@ export default function HeroCarousel() {
       description: "Hai domande? Vuoi saperne di più? Non esitare a contattarci!",
       buttonText: "Contattaci",
       buttonAction: () => window.location.href = "/contact",
-      backgroundMedia: "/images/logo.png",
+      backgroundMedia: "/images/dirigenza.jpg",
       mediaType: "image",
       backgroundAlpha: 0.5 // 50% black overlay
     }
