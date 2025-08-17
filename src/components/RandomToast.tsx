@@ -65,6 +65,9 @@ export default function RandomToast() {
 
 	useEffect(() => {
 		function showNextToast() {
+			// Dismiss all existing toasts before showing a new one
+			toast.dismiss();
+			
 			const currentMessage = toastMessages[currentIndexRef.current];
 			
 			try {
